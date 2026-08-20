@@ -1,0 +1,70 @@
+.home-page {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.notes-container {
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 24px auto 0;
+  padding: 16px;
+
+  box-sizing: border-box;
+}
+
+/* Loading */
+
+.loading-message {
+  text-align: center;
+
+  padding: 40px 0;
+
+  color: #570df8;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* Notes Grid */
+
+.notes-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 24px;
+}
+
+
+/* Tablet */
+
+@media (min-width: 768px) {
+  .notes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+  .notes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .notes-container {
+    padding: 12px;
+    margin-top: 16px;
+  }
+
+  .notes-grid {
+    gap: 16px;
+  }
+}

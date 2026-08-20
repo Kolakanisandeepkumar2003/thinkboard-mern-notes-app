@@ -1,0 +1,111 @@
+.rate-limit-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.rate-limit-card {
+  background-color: color-mix(
+    in oklab,
+    var(--fallback-p, oklch(var(--p))) 10%,
+    transparent
+  );
+
+  border: 1px solid color-mix(
+    in oklab,
+    var(--fallback-p, oklch(var(--p))) 30%,
+    transparent
+  );
+
+  border-radius: 0.5rem;
+
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.rate-limit-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 1.5rem;
+}
+
+.rate-limit-icon-wrapper {
+  flex-shrink: 0;
+
+  background-color: color-mix(
+    in oklab,
+    var(--fallback-p, oklch(var(--p))) 20%,
+    transparent
+  );
+
+  padding: 1rem;
+  border-radius: 9999px;
+
+  margin-bottom: 1rem;
+}
+
+.rate-limit-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  color: var(--fallback-p, oklch(var(--p)));
+}
+
+.rate-limit-message {
+  flex: 1;
+  text-align: center;
+}
+
+.rate-limit-title {
+  margin: 0 0 0.5rem;
+
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+
+  font-weight: 700;
+
+  color: var(--fallback-bc, oklch(var(--bc)));
+}
+
+.rate-limit-description {
+  margin: 0 0 0.25rem;
+
+  color: var(--fallback-bc, oklch(var(--bc)));
+}
+
+.rate-limit-subdescription {
+  margin: 0;
+
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+
+  color: color-mix(
+    in oklab,
+    var(--fallback-bc, oklch(var(--bc))) 70%,
+    transparent
+  );
+}
+
+
+/* ==============================
+   Desktop / Tablet
+   ============================== */
+
+@media (min-width: 768px) {
+  .rate-limit-content {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .rate-limit-icon-wrapper {
+    margin-bottom: 0;
+    margin-right: 1.5rem;
+  }
+
+  .rate-limit-message {
+    text-align: left;
+  }
+}
